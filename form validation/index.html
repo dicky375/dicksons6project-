@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class = "container">
+        <form id="form" action="/">
+            <h1>Registration</h1>
+            <div class="input-control">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required>
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <div class="password-field">
+                    <input type="password" id="password" name="password" placeholder= "Enter your password" required>
+                    <div class="icon-wrapper">
+                    <i class="fa-solid fa-eye-slash" id="toggle-password" onclick="togglePasswordVisibility('password')"></i>
+                    </div>
+                </div>
+                <div class="error"></div>
+                <div id="password-suggestions" class="password-suggestions"></div>
+            </div>
+            <div class="input-control">
+                <label for="confirm-password">Confirm Password</label>
+                <div class="password-field">
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                    <div class="icon-wrapper">
+                    <i class="fa-solid fa-eye-slash" id="toggle-confirm-password" onclick="togglePasswordVisibility('confirm-password')"></i>
+                    </div>
+                </div>
+                <div class="error"></div>
+                <div id="confirm-password-suggestions" class="password-suggestions"></div>
+                </div>
+            <button type="submit">Submit</button>
+        </form>
+    
+    <script defer src="index.js"></script>
+    
+</body>
+</html>
